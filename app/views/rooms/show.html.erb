@@ -1,6 +1,8 @@
 <h1>Chat room</h1>
 
 <div id="messages">
-  <%= render @messages %>
+  <% @messages.each do |message| %>
+    <%= render partial: 'messages/message', locals: { message: message } %>
+  <% end %>
 </div>
 
